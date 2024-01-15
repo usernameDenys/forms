@@ -1,0 +1,23 @@
+.bio {
+    @include flex(column, space-between);
+    flex-basis: 100%;
+    margin-bottom: rem(30);
+
+    label {
+        @include label-styles();
+    }
+
+    .textarea {
+        @include input-text-style();
+        height: rem(157);
+        font-family: Arial;
+        font-size: rem(17);
+        color: $secondary;
+    }
+
+    @include media-screen(600px) {
+        @include flex(column, center);
+        max-width: rem(331);
+        margin-left: 0;
+    }
+}

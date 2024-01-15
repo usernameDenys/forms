@@ -1,0 +1,31 @@
+.header {
+    @include center();
+    position: relative;
+    font-family: 'Roboto';
+    width: rem(1600);
+    height: rem(214);
+    background-color: $primary;
+    color: $color-light;
+
+    .img {
+        position: absolute;
+        right: rem(88.8);
+        width: rem(340.1);
+        height: rem(243.3);
+        margin-top: rem(80);
+    }
+
+    @include media-screen(600px) {
+        @include flex(column, start);
+        line-height: rem(120);
+        max-width: 100%;
+
+        .img {
+            position: absolute;
+            right: rem(10.4);
+            width: rem(203);
+            height: rem(145);
+            margin-top: rem(106);
+        }
+    }
+}

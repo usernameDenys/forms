@@ -1,0 +1,89 @@
+.hobbies {
+    @include flex(column, center);
+    flex-basis: calc(50% - rem(21));
+    margin-left: rem(21);
+    margin-bottom: rem(30);
+
+
+    .label-check {
+        @include label-styles();
+    }
+
+    .checkbox-group {
+        @include flex(row, space-between);
+        gap: rem(26);
+
+        padding-left: rem(38);
+        padding-right: rem(38);
+    }
+
+    [type="checkbox"] {
+        display: none;
+    }
+
+    .custom-checkbox {
+        position: relative;
+        display: inline-block;
+        width: rem(38);
+        height: rem(38);
+        border: $base-border-thickness solid $secondary;
+        border-radius: 50%;
+        color: $secondary;
+        cursor: pointer;
+    }
+
+    .checkbox-name {
+        @include center();
+    }
+
+    .custom-checkbox::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: rem(38);
+        height: rem(38);
+        background-color: $highlight-color;
+        background-image: url('../../img/checkmark-circle.png');
+        background-repeat: no-repeat;
+        background-size: rem(22) rem(22);
+        background-position: 50%;
+        border: $base-border-thickness solid $highlight-color;
+        border-radius: 50%;
+        opacity: 0;
+        transition: .2s;
+    }
+
+    [type="checkbox"]:checked+.custom-checkbox::before {
+        opacity: 1;
+    }
+
+    .text {
+        display: inline-block;
+        line-height: rem(42);
+        padding-left: rem(9);
+        color: $color-dark;
+    }
+
+    @include media-screen(960px) {
+        @include flex(column, center);
+        margin-left: 0;
+    }
+
+    @include media-screen(600px) {
+        .checkbox-name {
+            @include flex(row, start);
+            width: rem(110);
+        }
+
+        .checkbox-group {
+            @include flex(row, space-between);
+            max-width: rem(260);
+            gap: rem(36);
+            flex-wrap: wrap;
+            padding-left: rem(38);
+            padding-right: rem(0);
+        }
+    }
+}

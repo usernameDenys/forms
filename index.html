@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/Fox_icon.png">
+    <link rel="stylesheet" href="styles/css/index.css">
+    <title>Create Account</title>
+</head>
+
+<body class="body">
+    <header class="header">
+        <h1>Create Account</h1>
+        <img class="img" src="img/fox.svg" alt="fox image">
+    </header>
+    <main class="container">
+        <form class="wrapper">
+            <section class="firstName">
+                <label for="firstName">First name*</label>
+                <input type="text" name="firstName" id="firstName" placeholder="Enter your first name" autocomplete="on"
+                    required autofocus>
+            </section>
+            <section class="lastName">
+                <label for="lastName">Last name*</label>
+                <input type="text" name="lastName" id="lastName" placeholder="Enter your last name" autocomplete="on"
+                    required>
+            </section>
+            <section class="email">
+                <label class="label" for="email">Email*</label>
+                <input type="text" name="email" id="email" placeholder="Enter your email" autocomplete="on" required>
+            </section>
+            <section class="password">
+                <label class="label" for="password">Password*</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password" required>
+            </section>
+            <section class="confirmPassword">
+                <label class="label" for="password">Confirm Password*</label>
+                <input type="password" name="password" id="password" placeholder="Enter correct your confirm password"
+                    required>
+            </section>
+            <section class="gender">
+                <h3 class="label-radio">Gender:</h3>
+                <div class="radio-group">
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label class="radio" for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label class="radio" for="female">Female</label>
+                </div>
+            </section>
+            <section class="hobbies">
+                <h3 class="label-check">Hobbies</h3>
+                <div class="checkbox-group">
+                    <label class="checkbox-name" for="music">
+                        <input type="checkbox" name="hobbies" id="music">
+                        <span class="custom-checkbox"></span>
+                        <span class="text">Music</span>
+                    </label>
+                    <label class="checkbox-name" for="sport">
+                        <input type="checkbox" name="hobbies" id="sport">
+                        <span class="custom-checkbox"></span>
+                        <span class="text">Sport</span>
+                    </label>
+                    <label class="checkbox-name" for="travel">
+                        <input type="checkbox" name="hobbies" id="travel">
+                        <span class="custom-checkbox"></span>
+                        <span class="text">Travel</span>
+                    </label>
+                    <label class="checkbox-name" for="movies">
+                        <input type="checkbox" name="hobbies" id="movies">
+                        <span class="custom-checkbox"></span>
+                        <span class="text">Movies</span>
+                    </label>
+                </div>
+            </section>
+            <section class="soursOfIncome">
+                <label for="soursOfIncome">Sourse of Income</label>
+                <select class="select" name="soursOfIncome" id="soursOfIncome">
+                    <option value="employed">Employed</option>
+                    <option value="employed">Employed</option>
+                    <option value="employed">Employed</option>
+                    <option value="employed">Employed</option>
+                </select>
+                <span class="arrow"></span>
+            </section>
+            <section class="income">
+                <div class="range-wrapper">
+                    <label for="incom">Incom</label>
+                    <input class="range-field" type="range" name="incom" min="0" max="100"
+                        onchange="rangevalue.value=value">
+                    <div class="output">
+                        <output class="rangevalue_1" id="rangevalue">50</output>
+                        <span class="rangevalue_2">K</span>
+                    </div>
+                </div>
+            </section>
+            <section class="uploadPicture">
+                <label for="uploadFile"> Upload Profile Picture</label>
+                <input type="file" name="uploadFile" id="uploadFile" accept="image/*">
+            </section>
+            <section class="age-wrapper">
+                <label for="age">Age</label>
+                <input class="age" type="text" name="age" id="age" placeholder="Enter your age" autocomplete="off"
+                    required>
+            </section>
+            <section class="bio">
+                <label for="bio">Bio:</label>
+                <textarea class="textarea" name="userBio" id="bio" placeholder="Tell about yourself"></textarea>
+            </section>
+        </form>
+        <section class="button-wrapper">
+            <button class="submit" type="submit">Create</button>
+        </section>
+    </main>
+</body>
+
+</html>

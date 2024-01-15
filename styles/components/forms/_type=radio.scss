@@ -1,0 +1,52 @@
+.gender {
+    @include flex(column, center);
+    flex-basis: calc(50% - rem(21));
+    margin-right: rem(21);
+    margin-bottom: rem(30);
+
+    .label-radio {
+        @include label-styles();
+    }
+
+    .radio-group {
+        @include flex(row, start);
+        gap: rem(26);
+    }
+
+    [type="radio"] {
+        opacity: 0;
+    }
+
+    [type="radio"]+.radio {
+        position: relative;
+        padding-left: rem(50);
+        cursor: pointer;
+        display: inline-block;
+        color: $color-dark;
+        line-height: rem(42);
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: rem(38);
+            height: rem(38);
+            border-radius: 100%;
+            border: $base-border-thickness solid $secondary;
+            background: $color-light;
+        }
+    }
+
+    [type="radio"]:checked+.radio::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: rem(28);
+        height: rem(28);
+        border-radius: 100%;
+        background: $primary;
+        border: rem(7) solid $highlight-color;
+    }
+}

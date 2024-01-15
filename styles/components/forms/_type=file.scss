@@ -1,0 +1,19 @@
+.uploadPicture {
+    @include flex(column, space-between);
+    flex-basis: calc(50% - rem(21));
+    margin-right: rem(21);
+    margin-bottom: rem(30);
+
+    label {
+        @include label-styles();
+    }
+
+    ::file-selector-button {
+        color: $color-light;
+        background-color: $upload-button;
+        width: rem(197);
+        height: rem(44);
+        border-radius: rem(10);
+        border: none;
+    }
+}

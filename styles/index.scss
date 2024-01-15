@@ -1,0 +1,25 @@
+//variables & functions
+@import 'functions';
+@import 'variables';
+
+//mixins
+@import 'mixins';
+
+//base & layaut
+@import 'base';
+@import 'markup';
+
+//components
+@import 'components/header';
+@import 'components/forms/type=text';
+@import 'components/forms/type=radio';
+@import 'components/forms/type=checkbox';
+@import 'components/forms/type=select';
+@import 'components/forms/type=range';
+@import 'components/forms/type=file';
+@import 'components/forms/type=textarea';
+@import 'components/button';
+
+
+
+//sass --watch styles/index.scss:styles/css/index.css

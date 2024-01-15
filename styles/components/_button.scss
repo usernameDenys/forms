@@ -1,0 +1,27 @@
+.button-wrapper {
+    @include flex(row, end);
+
+    .submit {
+        width: rem(327);
+        height: rem(58);
+        margin-top: rem(20);
+        margin-bottom: rem(126);
+        border: $base-border-thickness solid $secondary;
+        border-radius: rem(10);
+        font-family: Arial;
+        font-size: rem(17);
+        font-style: normal;
+        font-weight: 400;
+        text-align: center;
+        line-height: rem(25);
+        background-color: $primary;
+        color: $color-light;
+    }
+
+    .submit:hover {
+        border: $base-border-thickness solid $primary;
+        color: $primary;
+        background-color: $color-light;
+        transition: .3s;
+    }
+}

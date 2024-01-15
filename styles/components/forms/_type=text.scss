@@ -1,0 +1,179 @@
+.firstName {
+    @include flex(column, space-between);
+    flex-basis: calc(50% - rem(21));
+    margin-right: rem(21);
+    margin-top: rem(60);
+    margin-bottom: rem(30);
+
+    label {
+        @include label-styles();
+    }
+
+    input[type="text"] {
+        @include input-text-style();
+    }
+
+    @include media-screen(960px) {
+        @include flex(column, center);
+        max-width: rem(700);
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    @include media-screen(600px) {
+        @include flex(column, center);
+        max-width: rem(331);
+        margin-left: 0;
+    }
+}
+
+.lastName {
+    @include flex(column, space-between);
+    flex-basis: calc(50% - rem(21));
+    margin-left: rem(21);
+    margin-top: rem(60);
+    margin-bottom: rem(30);
+
+    label {
+        @include label-styles();
+    }
+
+    input[type="text"] {
+        @include input-text-style();
+    }
+
+    @include media-screen(960px) {
+        @include flex(column, center);
+        max-width: rem(700);
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    @include media-screen(600px) {
+        @include flex(column, center);
+        max-width: rem(331);
+        margin-left: 0;
+    }
+}
+
+.email {
+    flex-basis: 100%;
+    margin-bottom: rem(30);
+    @include flex(column, space-between);
+
+    label {
+        @include label-styles();
+    }
+
+    input[type="text"] {
+        @include input-text-style();
+    }
+
+    @include media-screen(960px) {
+        @include flex(column, center);
+        max-width: rem(700);
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    @include media-screen(600px) {
+        @include flex(column, center);
+        max-width: rem(331);
+        margin-left: 0;
+
+        input[type="text"] {
+            max-width: rem(331);
+        }
+    }
+}
+
+.password {
+    @include flex(column, space-between);
+    flex-basis: calc(50% - rem(21));
+    margin-right: rem(21);
+    margin-bottom: rem(30);
+
+    label {
+        @include label-styles();
+    }
+
+    input[type="password"] {
+        @include input-text-style();
+        border: $base-border-thickness solid $secondary;
+        color: $secondary;
+    }
+
+    @include media-screen(960px) {
+        @include flex(column, center);
+        max-width: rem(700);
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    @include media-screen(600px) {
+        @include flex(column, center);
+        max-width: rem(331);
+        margin-left: 0;
+    }
+}
+
+.confirmPassword {
+    @include flex(column, space-between);
+    flex-basis: calc(50% - rem(21));
+    margin-left: rem(21);
+    margin-bottom: rem(30);
+
+    label {
+        @include label-styles();
+    }
+
+    input[type="password"] {
+        @include input-text-style();
+        border: $base-border-thickness solid $secondary;
+        color: $secondary;
+    }
+
+    @include media-screen(960px) {
+        @include flex(column, center);
+        max-width: rem(700);
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    @include media-screen(600px) {
+        @include flex(column, center);
+        max-width: rem(331);
+        margin-left: 0;
+    }
+}
+
+.age-wrapper {
+    @include flex(column, space-between);
+    flex-basis: calc(50% - rem(21));
+    margin-left: rem(21);
+    margin-bottom: rem(30);
+
+    label {
+        @include label-styles();
+    }
+
+    .age {
+        @include input-text-style();
+        border: $base-border-thickness solid $secondary;
+        color: $secondary;
+    }
+
+    @include media-screen(960px) {
+        @include flex(column, center);
+        max-width: rem(700);
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    @include media-screen(600px) {
+        @include flex(column, center);
+        max-width: rem(331);
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,39 @@
+@mixin flex($flex-direction, $justify-content) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+}
+
+@mixin center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body {
+    @include center();
+    flex-direction: column;
+}
+
+.container {
+    @include flex(column, space-between);
+    flex-wrap: wrap;
+    min-height: 100%;
+    max-width: rem(1332);
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+
+    @include media-screen(960px) {
+        @include flex(column, center);
+        margin-left: 0;
+    }
+
+    @include media-screen(600px) {
+        @include flex(column, center);
+        max-width: rem(331);
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,36 @@
+@mixin flex($flex-direction, $justify-content) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+}
+
+@mixin center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin label-styles() {
+    line-height: rem(22);
+    margin-bottom: rem(15);
+    margin-left: rem(38);
+    font-family: Arial;
+    font-size: rem(17);
+    font-style: normal;
+    font-weight: 700;
+    color: $primary;
+}
+
+@mixin input-text-style() {
+    height: rem(44);
+    padding-left: rem(37);
+    border-radius: $base-border-radius;
+    border: $base-border-thickness solid $secondary;
+    color: $secondary;
+}
+
+@mixin media-screen($max-width) {
+    @media screen and (max-width: $max-width) {
+        @content;
+    }
+}

@@ -1,0 +1,46 @@
+.soursOfIncome {
+    @include flex(column, space-between);
+    position: relative;
+    flex-basis: calc(50% - rem(21));
+    margin-right: rem(21);
+    margin-bottom: rem(30);
+
+    label {
+        @include label-styles();
+    }
+
+    .select {
+        @include input-text-style();
+        border: $base-border-thickness solid $secondary;
+        background-color: #fff;
+        color: $color-dark;
+    }
+
+    .arrow {
+        position: absolute;
+        display: block;
+        top: rem(40);
+        right: 0;
+        height: rem(38);
+        width: rem(26);
+        margin-right: rem(2);
+        border-top-right-radius: $base-border-radius;
+        border-bottom-right-radius: $base-border-radius;
+        background: #fff;
+        background-image: url('../../img/arrow.svg');
+        pointer-events: none;
+    }
+
+    @include media-screen(960px) {
+        @include flex(column, center);
+        max-width: rem(700);
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    @include media-screen(600px) {
+        @include flex(column, center);
+        max-width: rem(331);
+        margin-left: 0;
+    }
+}

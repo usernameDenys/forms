@@ -1,0 +1,126 @@
+.income {
+    @include flex(column, space-between);
+    flex-basis: calc(50% - rem(21));
+    margin-left: rem(21);
+    margin-bottom: rem(30);
+
+    .range-wrapper {
+        @include flex(row, space-between);
+        flex-wrap: wrap;
+
+        label {
+            @include label-styles();
+            margin-right: rem(200);
+        }
+
+        [type="range"] {
+            appearance: none;
+            width: rem(508);
+            height: rem(6);
+            margin: auto;
+            margin-left: 0;
+            border: $base-border-thickness solid $secondary;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, .1);
+            border-radius: rem(3);
+            background-color: $primary;
+        }
+
+        [type="range"]::-webkit-slider-thumb {
+            appearance: none;
+            width: rem(28);
+            height: rem(28);
+            border-radius: 50%;
+            background-color: $color-light;
+            border: $base-border-thickness solid $secondary;
+            cursor: pointer;
+        }
+
+        [type="range"]::-moz-range-thumb {
+            appearance: none;
+            width: rem(28);
+            height: rem(28);
+            border-radius: 50%;
+            background-color: $color-light;
+            border: $base-border-thickness solid $secondary;
+            cursor: pointer;
+        }
+
+        .output {
+            @include flex(row, center);
+            gap: rem(4);
+            width: rem(94);
+            height: rem(44);
+            border-radius: $base-border-radius;
+            background-color: $primary;
+
+            .rangevalue_1 {
+                display: inline-block;
+                line-height: rem(42);
+                text-align: center;
+                color: $color-light;
+            }
+
+            .rangevalue_2 {
+                display: inline-block;
+                line-height: rem(42);
+                text-align: center;
+                color: $color-light;
+            }
+        }
+    }
+
+    @include media-screen(1280px) {
+        .range-wrapper {
+            @include flex(column, start);
+            flex-wrap: wrap;
+            gap: rem(30);
+
+            label {
+                @include label-styles();
+                margin-left: rem(20);
+                margin-right: rem(200);
+            }
+        }
+    }
+
+    @include media-screen(960px) {
+        .range-wrapper {
+            @include flex(column, start);
+            flex-wrap: wrap;
+            gap: rem(30);
+
+            label {
+                @include label-styles();
+                margin-left: rem(20);
+                margin-right: rem(200);
+            }
+        }
+    }
+
+    @include media-screen(600px) {
+        .range-wrapper {
+            @include flex(column, start);
+            flex-wrap: wrap;
+            gap: rem(30);
+            width: rem(331);
+            margin-left: 0;
+            position: relative;
+
+            label {
+                @include label-styles();
+                margin-left: rem(20);
+            }
+
+            [type="range"] {
+                max-width: rem(315);
+            }
+
+            .output {
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin-right: rem(20);
+            }
+        }
+    }
+}
